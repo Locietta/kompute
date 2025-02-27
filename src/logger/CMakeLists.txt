@@ -50,7 +50,7 @@ else()
 endif()
 
 # Always make sure we define the Kompute log level independent of the Spdlog log level
-target_compile_definitions(kp_logger INTERFACE KOMPUTE_OPT_ACTIVE_LOG_LEVEL=KOMPUTE_LOG_LEVEL_${KOMPUTE_OPT_LOG_LEVEL})
+target_compile_definitions(kp_logger PUBLIC KOMPUTE_OPT_ACTIVE_LOG_LEVEL=KOMPUTE_LOG_LEVEL_${KOMPUTE_OPT_LOG_LEVEL})
 
 # Link depending on how the logger should be setup
 if(NOT KOMPUTE_OPT_LOG_LEVEL_DISABLED)
